@@ -306,9 +306,9 @@ export default function MonochromeDitheringEditor() {
   const palette = useMemo(() => PALETTES[paletteKey], [paletteKey]);
 
   return (
-    <div className="min-h-screen w-full bg-zinc-950 text-zinc-100 flex">
+    <div className="min-h-screen w-full bg-zinc-950 text-zinc-100 flex flex-col md:flex-row">
       {/* Left Sidebar - Controls */}
-      <div className="w-80 bg-zinc-900/50 border-r border-zinc-800 flex flex-col">
+      <div className="w-full md:w-80 bg-zinc-900/50 border-b md:border-b-0 md:border-r border-zinc-800 flex flex-col">
         {/* Header */}
         <div className="p-6 border-b border-zinc-800">
           <h1 className="text-xl font-semibold tracking-tight">Dithering Editor</h1>
@@ -501,7 +501,7 @@ export default function MonochromeDitheringEditor() {
             </div>
           ) : (
             /* Preview Panes */
-            <div className="h-full grid grid-cols-2 gap-6">
+            <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col">
                 <div className="text-xs uppercase text-zinc-500 mb-3 font-medium">ORIGINAL</div>
                 <div className="flex-1 bg-black/20 rounded-xl overflow-hidden border border-zinc-800 flex items-center justify-center">
